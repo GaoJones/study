@@ -1,13 +1,27 @@
 $(document).ready(function () {
   'user strict';
-  let arr = ["I", "love", "JavaScript"];
-  console.log(getSentence(arr));
+
+  const arrr = [1, 2, 3, 4];
+  arrr.copyWithin(0, -3, -2);
+
+
+  for (const iterator of arrr) {
+    console.log(iterator);
+  }
+
+  // for (let key in per) {
+  //   console.log("per[" + key + "]=" + per[key]);
+  // }
 
 });
 
-function getGreeting () {
-  return "Hello,World";
+function getGreeting (o) {
+  o.message = "set in f";
+  o = { message: "new object!" };
+  console.log(o.message);
 }
-function getSentence ({ subject, verb, object }) {
-  return '${subject} ${verb} ${object}';
+
+function update (birthYear, occupation) {
+  birthYear = birthYear;
+  occupation = occupation;
 }
